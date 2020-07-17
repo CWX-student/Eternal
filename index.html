@@ -31,15 +31,7 @@
     })(window);
     </script>
 
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?09e710fc648ef3b5b565750604fb3199";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+<link rel="syslesheet" href="live2d/css/live2d.css">
 
 
 </head>
@@ -65,8 +57,16 @@ var _hmt = _hmt || [];
                     <a class="cd-btn" href="about.html">About me</a>
                 </div>
                 <div class="cd-half-width cd-img-container">
-                    <img src="style/images/tech-1.jpg" alt="Caiwen Xu" title="Caiwen Xu" title="A photo taken in Xiamen">/>
+                    <img src="style/images/tech-1.jpg" alt="Caiwen Xu" title="Caiwen Xu" >/>
                 </div>
+		    
+		    
+		   <div id="landlord">
+                   <div class="message" style="opacity:0"></div>
+                   <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+                   <div class="hide-button">隐藏</div>
+                   </div>
+		    
             </li>
 	    <li>
 		<div class="cd-half-width">
@@ -177,6 +177,19 @@ var _hmt = _hmt || [];
 	show_site_runtime();
 </script>
     <script charset="gbk" src="https://www.baidu.com/js/opensug.js"></script>
+
+
+<script type="text/javascript"><br />
+    var message_Path = '/live2dw/js/message.js/'<br />
+    var home_Path = 'https://cwx-student.github.io/Eternal/' //此处修改为你的域名<br />
+</script>
+<script type="text/javascript" src="live2d/js/live2d.js"></script>
+<script type="text/javascript" src="live2d/js/message.js"></script>
+<script type="text/javascript"><br />
+    loadlive2d("live2d", "/live2dw/model/pio/model.json");<br />
+</script>
+
+
 </body>
 
 </html>
