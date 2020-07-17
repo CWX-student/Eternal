@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <!-- Js -->
     <link rel="stylesheet" href="style/css/bootstrap.min.css">
-    <link rel="syslesheet" href="live2d/css/live2d.css">
+ 
     <script src="style/js/jquery.min.js"></script>
     <script src="style/js/tether.min.js"></script>
     <script src="style/js/bootstrap.min.js"></script>
@@ -32,6 +32,10 @@ position: relative;
                          }
 </style>
 
+<link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+<link rel="stylesheet" type="text/css" href="assets/waifu.css"/>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	
 </head>
 
 <body background="">
@@ -90,11 +94,8 @@ position: relative;
 		    
 
     </div>
-<div id="landlord">
-<div class="message" style="opacity:0"></div>
-<canvas id="live2d" width="280" height="250" class="live2d"></canvas>
-<div class="hide-button">h隐藏</div>
-</div>
+		
+
     <!-- Footer -->
 
         
@@ -140,15 +141,18 @@ position: relative;
     }
 	show_site_runtime();
 </script>
-	    <script type="text/javascript"><br />
-            var message_Path = 'live2d/js/message.js/'<br />
-            var home_Path = 'https://cwx-student.github.io/' //此处修改为你的域名<br />
-            </script>
-            <script type="text/javascript" src="live2d/js/live2d.js"></script>
-             <script type="text/javascript" src="live2d/js/message.js"></script>
-             <script type="text/javascript"><br />
-             loadlive2d("live2d", "live2d/model/pio/model.json");<br />
-            </script>
+	    
+<input placeholder="和她聊天" id="talk"/>
+<form id="uploadForm">
+    <input type="file" name="file"/>
+</form>
+<div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" width="320" height="280" class="live2d"></canvas>
+</div>
+<script src="assets/waifu-tips.js"></script>
+<script src="assets/live2d.js"></script>
+<script type="text/javascript">initModel("assets/")</script>
 
 </body>
 
